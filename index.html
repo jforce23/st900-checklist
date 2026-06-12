@@ -120,6 +120,39 @@
   <button class="btn-start" onclick="startAudio()">▶ AUDIO-MODUS STARTEN</button>
   <button class="btn-secondary" onclick="startManual()">MANUELL DURCHGEHEN</button>
   <div class="last-check" id="last-check-label"></div>
+
+  <div style="margin-top:2rem;width:100%;max-width:320px;">
+    <div style="font-size:9px;letter-spacing:.25em;color:#555;text-align:center;margin-bottom:12px;text-transform:uppercase;">Apps</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+      <button onclick="openApp('calimoto://')" style="background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:12px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#e8500a"/>
+          <path d="M14 6 L22 20 H6 Z" fill="white" opacity="0.95"/>
+          <circle cx="14" cy="17" r="2.5" fill="#e8500a"/>
+        </svg>
+        <span style="font-size:9px;letter-spacing:.1em;color:#999;font-family:monospace;">CALIMOTO</span>
+      </button>
+      <button onclick="openApp('alpinestars://')" style="background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:12px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#111"/>
+          <polygon points="14,5 23,22 5,22" fill="none" stroke="white" stroke-width="1.5"/>
+          <polygon points="14,9 20,20 8,20" fill="white" opacity="0.15"/>
+          <line x1="14" y1="9" x2="14" y2="20" stroke="white" stroke-width="1.2"/>
+        </svg>
+        <span style="font-size:9px;letter-spacing:.1em;color:#999;font-family:monospace;">ALPINESTAR</span>
+      </button>
+      <button onclick="openApp('packtalk://')" style="background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:12px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#d4a017"/>
+          <circle cx="14" cy="14" r="6" fill="none" stroke="white" stroke-width="1.8"/>
+          <circle cx="14" cy="14" r="2.5" fill="white"/>
+          <path d="M14 4 Q18 9 18 14 Q18 19 14 24" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+          <path d="M14 4 Q10 9 10 14 Q10 19 14 24" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+        </svg>
+        <span style="font-size:9px;letter-spacing:.1em;color:#999;font-family:monospace;">CARDO</span>
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- CHECKLIST (audio mode) -->
@@ -290,6 +323,19 @@ let currentUtterance = null;
 let manConfirmed = new Array(TOTAL).fill(false);
 
 // — PWA SERVICE WORKER —
+function openApp(url) {
+  window.location.href = url;
+  setTimeout(() => {
+    const scheme = url.split('://')[0];
+    const stores = {
+      'calimoto': 'https://apps.apple.com/app/calimoto/id1209129603',
+      'alpinestars': 'https://apps.apple.com/app/alpinestars-tech-air/id1065871569',
+      'packtalk': 'https://apps.apple.com/app/cardo-connect/id1090550849'
+    };
+    if (stores[scheme]) window.location.href = stores[scheme];
+  }, 1500);
+}
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(()=>{});
 }
@@ -373,6 +419,11 @@ function loadCockpitVoice() {
 if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadCockpitVoice;
 setTimeout(loadCockpitVoice, 500);
 
+function getRate(base) {
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+  return ios ? base * 0.78 : base;
+}
+
 function speak(text, callback, volume=1.0, rate=1.25) {
   if (!synth) { if(callback) callback(); return; }
   synth.cancel();
@@ -380,7 +431,7 @@ function speak(text, callback, volume=1.0, rate=1.25) {
   u.lang = 'en-US';
   if (cockpitVoice) u.voice = cockpitVoice;
   u.volume = volume;
-  u.rate = rate;
+  u.rate = getRate(rate);
   u.pitch = 0.88;
   if (callback) u.onend = callback;
   currentUtterance = u;
