@@ -214,34 +214,34 @@
 
 <script>
 const ITEMS = [
-  {phase:'01 — PRE-FLIGHT · MOTORRAD', challenge:'Reifen — Druck und Zustand', response:'CHECKED', speak:'Reifen, Druck und Zustand'},
-  {challenge:'Motoröl — Stand', response:'CHECKED', speak:'Motoröl, Stand'},
-  {challenge:'Kühlflüssigkeit — Min Max', response:'CHECKED', speak:'Kühlflüssigkeit'},
-  {challenge:'Kette — Spannung und Schmierung', response:'CHECKED', speak:'Kette, Spannung und Schmierung'},
-  {challenge:'Leckagen am Boden', response:'NONE', speak:'Leckagen am Boden'},
-  {challenge:'Tank — Kraftstoff ausreichend', response:'SUFFICIENT', speak:'Tank, Kraftstoff'},
-  {challenge:'Beleuchtung — alle Lichter', response:'OPERATIVE', speak:'Beleuchtung, alle Lichter'},
-  {challenge:'Spiegel — Ausrichtung', response:'SET', speak:'Spiegel, Ausrichtung'},
-  {phase:'02 — PRE-FLIGHT · ERGONOMIE', challenge:'Bremshebel — Winkel und Abstand', response:'SET', speak:'Bremshebel, Winkel und Abstand'},
-  {challenge:'Fussrasten und Schalthebel — Winkel', response:'SET', speak:'Fussrasten und Schalthebel'},
-  {challenge:'Sitzposition — beide Füsse auf Boden', response:'CONFIRMED', speak:'Sitzposition'},
-  {challenge:'Gepäck und Topcase — gesichert', response:'SECURED', speak:'Gepäck und Topcase'},
-  {challenge:'Diebstahlschutz Abus — entfernt', response:'REMOVED', speak:'Diebstahlschutz Abus'},
-  {phase:'03 — AUSRÜSTUNG · CREW GEAR', challenge:'Helm Shoei Glamster — Verschluss', response:'LOCKED', speak:'Helm Shoei, Verschluss'},
-  {challenge:'Jacke Alpinestars — Protektoren und Reissverschlüsse', response:'CLOSED', speak:'Jacke Alpinestars, Protektoren und Reissverschlüsse'},
-  {challenge:'Tech-Air Airbag — LED Status', response:'GREEN', speak:'Tech-Air Airbag, LED Status'},
-  {challenge:'Handschuhe Held Madoc', response:'ON', speak:'Handschuhe'},
-  {challenge:'Stiefel Stylmartin Rocket', response:'CLOSED', speak:'Stiefel Stylmartin'},
-  {challenge:'Jeans Rebelhorn mit D30 Hüftprotektoren', response:'ON AND SET', speak:'Jeans mit Hüftprotektoren'},
-  {phase:'04 — BEFORE START · SYSTEME', challenge:'Fahrmodus — Road oder Rain', response:'SELECTED', speak:'Fahrmodus, Road oder Rain'},
-  {challenge:'ABS Kontrollleuchte nach Anfahren', response:'OFF', speak:'ABS Kontrollleuchte'},
-  {challenge:'Wetter und Strasse — Einschätzung', response:'ASSESSED', speak:'Wetter und Strasse'},
-  {challenge:'Regenkombi — dabei wenn nötig', response:'STOWED', speak:'Regenkombi'},
-  {phase:'05 — BEFORE DEPARTURE · MENTAL BRIEFING', challenge:'Pilot — fit to ride', response:'FIT', speak:'Pilot, fit to ride'},
-  {challenge:'Vollbremsung — Gas zu, kuppeln, beide Bremsen voll', response:'CONFIRMED', speak:'Vollbremsung, Gas zu, kuppeln, beide Bremsen voll'},
-  {challenge:'Abstand — Zwei-Sekunden-Regel', response:'CONFIRMED', speak:'Abstand, Zwei-Sekunden-Regel'},
-  {challenge:'Kreuzungen — bremsbereit und Blickkontakt', response:'CONFIRMED', speak:'Kreuzungen, bremsbereit und Blickkontakt'},
-  {challenge:'Kurven — sanft bremsen, Ausweg fixieren', response:'CONFIRMED', speak:'Kurven, sanft bremsen, Ausweg fixieren'},
+  {phase:'01 — PRE-FLIGHT · MOTORRAD', phaseComplete:'Pre-flight. Motorcycle. Complete.', challenge:'Reifen — Druck und Zustand', response:'CHECKED', speak:'Tires. Pressure and condition.'},
+  {challenge:'Motoröl — Stand', response:'CHECKED', speak:'Engine oil. Level.'},
+  {challenge:'Kühlflüssigkeit — Min Max', response:'CHECKED', speak:'Coolant. Min. Max.'},
+  {challenge:'Kette — Spannung und Schmierung', response:'CHECKED', speak:'Chain. Tension and lubrication.'},
+  {challenge:'Leckagen am Boden', response:'NONE', speak:'Leaks. Ground check.'},
+  {challenge:'Tank — Kraftstoff ausreichend', response:'SUFFICIENT', speak:'Fuel. Quantity.'},
+  {challenge:'Beleuchtung — alle Lichter', response:'OPERATIVE', speak:'Lights. All systems.'},
+  {challenge:'Spiegel — Ausrichtung', response:'SET', speak:'Mirrors. Alignment.'},
+  {phase:'02 — PRE-FLIGHT · ERGONOMIE', phaseComplete:'Pre-flight. Ergonomics. Complete.', challenge:'Bremshebel — Winkel und Abstand', response:'SET', speak:'Brake lever. Angle and reach.'},
+  {challenge:'Fussrasten und Schalthebel — Winkel', response:'SET', speak:'Foot pegs. Gear lever. Angle.'},
+  {challenge:'Sitzposition — beide Füsse auf Boden', response:'CONFIRMED', speak:'Seating position. Both feet.'},
+  {challenge:'Gepäck und Topcase — gesichert', response:'SECURED', speak:'Luggage and top case. Secured.'},
+  {challenge:'Diebstahlschutz Abus — entfernt', response:'REMOVED', speak:'Lock. Removed.'},
+  {phase:'03 — AUSRÜSTUNG · CREW GEAR', phaseComplete:'Crew gear. Complete.', challenge:'Helm Shoei Glamster — Verschluss', response:'LOCKED', speak:'Helmet. Visor. Locked.'},
+  {challenge:'Jacke Alpinestars — Protektoren und Reissverschlüsse', response:'CLOSED', speak:'Jacket. Protectors. Zippers.'},
+  {challenge:'Tech-Air Airbag — LED Status', response:'GREEN', speak:'Airbag. Status.'},
+  {challenge:'Handschuhe Held Madoc', response:'ON', speak:'Gloves.'},
+  {challenge:'Stiefel Stylmartin Rocket', response:'CLOSED', speak:'Boots.'},
+  {challenge:'Jeans Rebelhorn mit D30 Hüftprotektoren', response:'ON AND SET', speak:'Riding jeans. Hip protectors.'},
+  {phase:'04 — BEFORE START · SYSTEME', phaseComplete:'Before start. Systems. Complete.', challenge:'Fahrmodus — Road oder Rain', response:'SELECTED', speak:'Ride mode. Road or Rain.'},
+  {challenge:'ABS Kontrollleuchte nach Anfahren', response:'OFF', speak:'A B S. Warning light.'},
+  {challenge:'Wetter und Strasse — Einschätzung', response:'ASSESSED', speak:'Weather. Road conditions.'},
+  {challenge:'Regenkombi — dabei wenn nötig', response:'STOWED', speak:'Rain gear. Stowed.'},
+  {phase:'05 — BEFORE DEPARTURE · MENTAL BRIEFING', phaseComplete:'Before departure. Checklist complete. Clear to depart.', challenge:'Pilot — fit to ride', response:'FIT', speak:'Pilot. Fit to ride.'},
+  {challenge:'Vollbremsung — Gas zu, kuppeln, beide Bremsen voll', response:'CONFIRMED', speak:'Emergency braking. Both brakes. Full.'},
+  {challenge:'Abstand — Zwei-Sekunden-Regel', response:'CONFIRMED', speak:'Following distance. Two seconds.'},
+  {challenge:'Kreuzungen — bremsbereit und Blickkontakt', response:'CONFIRMED', speak:'Intersections. Eye contact.'},
+  {challenge:'Kurven — sanft bremsen, Ausweg fixieren', response:'CONFIRMED', speak:'Corners. No lean braking. Look ahead.'},
 ];
 
 const TOTAL = ITEMS.length;
@@ -299,8 +299,9 @@ function startAudio() {
   updateProgress();
   showScreen('checklist');
   setTimeout(() => {
-    highlightCurrent();
-    speakCurrent();
+    speak('Street Twin nine hundred. Pre-ride checklist. Starting.', () => {
+      setTimeout(() => { highlightCurrent(); speakCurrent(); }, 500);
+    }, 1.0, 0.78);
   }, 400);
 }
 
@@ -320,14 +321,30 @@ function speakCurrent() {
   }, 1.0, 1.0);
 }
 
-function speak(text, callback, volume=1.0, rate=1.0) {
+let cockpitVoice = null;
+
+function loadCockpitVoice() {
+  const voices = synth.getVoices();
+  const preferred = ['Samantha','Karen','Moira','Victoria','Allison','Susan','Zoe','Tessa'];
+  for (const name of preferred) {
+    const v = voices.find(v => v.name.includes(name) && v.lang.startsWith('en'));
+    if (v) { cockpitVoice = v; break; }
+  }
+  if (!cockpitVoice) cockpitVoice = voices.find(v => v.lang.startsWith('en-')) || null;
+}
+
+if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadCockpitVoice;
+setTimeout(loadCockpitVoice, 500);
+
+function speak(text, callback, volume=1.0, rate=0.82) {
   if (!synth) { if(callback) callback(); return; }
   synth.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'de-DE';
+  u.lang = 'en-US';
+  if (cockpitVoice) u.voice = cockpitVoice;
   u.volume = volume;
   u.rate = rate;
-  u.pitch = 1.0;
+  u.pitch = 0.88;
   if (callback) u.onend = callback;
   currentUtterance = u;
   synth.speak(u);
@@ -337,6 +354,14 @@ function stopSpeech() {
   if (synth) synth.cancel();
 }
 
+function getPhaseComplete(idx) {
+  for (let i = idx + 1; i <= TOTAL; i++) {
+    if (i === TOTAL) return null;
+    if (ITEMS[i].phase) return ITEMS[idx].phaseComplete || null;
+  }
+  return null;
+}
+
 function confirmCurrent() {
   if (currentIdx >= TOTAL) return;
   stopMic();
@@ -344,20 +369,28 @@ function confirmCurrent() {
   confirmed[currentIdx] = true;
   const row = document.querySelector('#checklist .item-row[data-id="'+currentIdx+'"]');
   if (row) { row.classList.remove('active-item'); row.classList.add('confirmed'); }
-  const response = ITEMS[currentIdx].response;
-  currentIdx++;
+
+  const nextIdx = currentIdx + 1;
+  const phaseComplete = (nextIdx >= TOTAL || ITEMS[nextIdx].phase) ? (ITEMS[currentIdx].phaseComplete || null) : null;
+
+  currentIdx = nextIdx;
   updateProgress();
+
   if (currentIdx >= TOTAL) {
-    speak(response, () => setTimeout(showDone, 400), 0.9, 1.0);
+    const finalPhrase = ITEMS[TOTAL-1].phaseComplete || 'Before departure checklist complete. Clear to depart.';
+    setTimeout(() => speak(finalPhrase, () => setTimeout(showDone, 800)), 300);
     return;
   }
-  speak(response, () => {
-    document.getElementById('voice-status').textContent = 'WEITER…';
+
+  if (phaseComplete) {
     setTimeout(() => {
-      highlightCurrent();
-      speakCurrent();
-    }, 400);
-  }, 0.9, 1.0);
+      speak(phaseComplete, () => {
+        setTimeout(() => { highlightCurrent(); speakCurrent(); }, 600);
+      }, 1.0, 0.78);
+    }, 300);
+  } else {
+    setTimeout(() => { highlightCurrent(); speakCurrent(); }, 350);
+  }
 }
 
 function updateProgress() {
@@ -372,17 +405,17 @@ function setupRecognition() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) return null;
   const r = new SpeechRecognition();
-  r.lang = 'de-DE';
+  r.lang = 'en-US';
   r.continuous = false;
   r.interimResults = false;
   r.onresult = (e) => {
     const t = e.results[0][0].transcript.toLowerCase().trim();
     document.getElementById('voice-status').textContent = '«' + t + '»';
-    const keywords = ['checked','check','ok','ja','bestätigt','confirmed','done','gut','passt','stimmt','roger'];
+    const keywords = ['checked','check','ok','yes','confirmed','done','roger','clear','set','affirmative'];
     if (keywords.some(k => t.includes(k))) {
       confirmCurrent();
     } else {
-      document.getElementById('voice-status').textContent = 'NICHT ERKANNT — NOCHMAL ODER ✓ TIPPEN';
+      document.getElementById('voice-status').textContent = 'NOT RECOGNISED — RETRY OR TAP ✓';
       setTimeout(() => startMicAuto(), 800);
     }
   };
