@@ -39,8 +39,8 @@
 
   /* HOME SCREEN */
   #home { align-items: center; justify-content: center; text-align: center; padding: 2rem; }
-  .logo-ring { width: 120px; height: 120px; border: 2px solid var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; }
-  .logo-text { font-size: 2rem; font-weight: bold; color: var(--text); letter-spacing: .1em; }
+  
+  
   .subtitle { font-size: 11px; color: var(--text-dim); letter-spacing: .2em; text-transform: uppercase; margin-bottom: 3rem; line-height: 1.8; }
   .btn-start { background: var(--red); color: #fff; border: none; border-radius: 4px; font-family: var(--mono); font-size: 13px; font-weight: bold; letter-spacing: .2em; padding: 16px 40px; cursor: pointer; width: 100%; max-width: 320px; }
   .btn-start:active { opacity: .8; }
@@ -109,8 +109,8 @@
 
 <!-- HOME -->
 <div id="home" class="screen active">
-  <div class="logo-ring">
-    <span class="logo-text">ST9</span>
+  <div style="width:240px;height:160px;margin:0 auto 1.5rem;overflow:hidden;border-radius:8px;">
+    <img src="data:image/png;base64,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" alt="Triumph Street Twin 900" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.92) contrast(1.05);">
   </div>
   <div class="subtitle">
     TRIUMPH STREET TWIN 900<br>
@@ -127,51 +127,67 @@
   <div class="cl-header">
     <button class="cl-back" onclick="goHome()">←</button>
     <span class="cl-title">PRE-RIDE CHECKLIST</span>
-    <span class="cl-counter" id="cl-counter">0/28</span>
+    <span class="cl-counter" id="cl-counter">0/42</span>
   </div>
   <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
 
   <div style="flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch;" id="items-scroll">
+    <div class="phase"><div class="phase-label">00 — PRE-RIDE · PILOT CHECK</div></div>
+    <div class="item-row" data-id="0"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Pilot — kein Alkohol, keine Drogen, keine Medikamente, keine Müdigkeit</div><div class="item-response">FIT</div></div></div>
+    <div class="item-row" data-id="1"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Wetter &amp; Strasse — Einschätzung</div><div class="item-response">ASSESSED</div></div></div>
+    <div class="item-row" data-id="2"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Calimoto — Route, km und Zeit geplant</div><div class="item-response">PLANNED</div></div></div>
+    <div class="item-row" data-id="3"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">iPhone — Benachrichtigungen aus, Bildschirmsperre auf Nie</div><div class="item-response">SET</div></div></div>
 
-    <div class="phase"><div class="phase-label">01 — PRE-FLIGHT · MOTORRAD</div></div>
-    <div class="item-row" data-id="0"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Reifen — Druck und Zustand</div><div class="item-response">CHECKED</div></div></div>
-    <div class="item-row" data-id="1"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Motoröl — Stand</div><div class="item-response">CHECKED</div></div></div>
-    <div class="item-row" data-id="2"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kühlflüssigkeit — Min Max</div><div class="item-response">CHECKED</div></div></div>
-    <div class="item-row" data-id="3"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kette — Spannung und Schmierung</div><div class="item-response">CHECKED</div></div></div>
+    <div class="phase"><div class="phase-label">01 — PRE-RIDE · SICHTPRÜFUNG</div></div>
     <div class="item-row" data-id="4"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Leckagen am Boden</div><div class="item-response">NONE</div></div></div>
-    <div class="item-row" data-id="5"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Tank — Kraftstoff ausreichend</div><div class="item-response">SUFFICIENT</div></div></div>
-    <div class="item-row" data-id="6"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Beleuchtung — alle Lichter</div><div class="item-response">OPERATIVE</div></div></div>
-    <div class="item-row" data-id="7"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Spiegel — Ausrichtung</div><div class="item-response">SET</div></div></div>
+    <div class="item-row" data-id="5"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Motoröl — Stand am Schauglas</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="6"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kühlmittel — Ausgleichsbehälter Min/Max</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="7"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kette — Spannung und Schmierung</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="8"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Reifen — Profil, Druck, Zustand</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="9"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Bremsflüssigkeit — beide Behälter Min/Max</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="10"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Gasgriff — kehrt frei in Leerlauf zurück</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="11"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Spiegel — Ausrichtung</div><div class="item-response">SET</div></div></div>
+    <div class="item-row" data-id="12"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Beleuchtung — alle Lichter</div><div class="item-response">OPERATIVE</div></div></div>
+    <div class="item-row" data-id="13"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Tank — Kraftstoff ausreichend</div><div class="item-response">SUFFICIENT</div></div></div>
+    <div class="item-row" data-id="14"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Diebstahlschloss — entfernt</div><div class="item-response">REMOVED</div></div></div>
+    <div class="item-row" data-id="15"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Fussrasten &amp; Schalthebel — auf Fahrer eingestellt</div><div class="item-response">SET</div></div></div>
+    <div class="item-row" data-id="16"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Sitzposition — bequem</div><div class="item-response">CONFIRMED</div></div></div>
 
-    <div class="phase"><div class="phase-label">02 — PRE-FLIGHT · ERGONOMIE</div></div>
-    <div class="item-row" data-id="8"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Bremshebel — Winkel und Abstand</div><div class="item-response">SET</div></div></div>
-    <div class="item-row" data-id="9"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Fussrasten und Schalthebel — Winkel</div><div class="item-response">SET</div></div></div>
-    <div class="item-row" data-id="10"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Sitzposition — beide Füsse auf Boden</div><div class="item-response">CONFIRMED</div></div></div>
-    <div class="item-row" data-id="11"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Gepäck und Topcase — gesichert</div><div class="item-response">SECURED</div></div></div>
-    <div class="item-row" data-id="12"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Diebstahlschutz Abus — entfernt</div><div class="item-response">REMOVED</div></div></div>
+    <div class="phase"><div class="phase-label">02 — AUSRÜSTUNG · CREW GEAR</div></div>
+    <div class="item-row" data-id="17"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Alpinestar App — öffnen</div><div class="item-response">OPEN</div></div></div>
+    <div class="item-row" data-id="18"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Airbag-Weste — mit App verbinden, LED grün, rote Taste drücken</div><div class="item-response">ARMED</div></div></div>
+    <div class="item-row" data-id="20"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Cardo Edge — einschalten</div><div class="item-response">ON</div></div></div>
+    <div class="item-row" data-id="21"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Helm — sitzt gut, Doppel-D Verschluss geschlossen</div><div class="item-response">LOCKED</div></div></div>
+    <div class="item-row" data-id="22"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Jacke — Protektoren drin, richtige Position, überall geschlossen</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="23"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Warnweste — über Jacke angezogen</div><div class="item-response">ON</div></div></div>
+    <div class="item-row" data-id="24"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Handschuhe — angezogen und Verschluss geschlossen</div><div class="item-response">SECURED</div></div></div>
+    <div class="item-row" data-id="25"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Schuhe — angezogen und Verschluss geschlossen</div><div class="item-response">SECURED</div></div></div>
+    <div class="item-row" data-id="26"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Jeans — Protektoren drin, sitzen an richtiger Körperstelle</div><div class="item-response">CHECKED</div></div></div>
 
-    <div class="phase"><div class="phase-label">03 — AUSRÜSTUNG · CREW GEAR</div></div>
-    <div class="item-row" data-id="13"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Helm Shoei Glamster — Verschluss</div><div class="item-response">LOCKED</div></div></div>
-    <div class="item-row" data-id="14"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Jacke Alpinestars — Protektoren und Reissverschlüsse</div><div class="item-response">CLOSED</div></div></div>
-    <div class="item-row" data-id="15"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Tech-Air Airbag — LED Status</div><div class="item-response">GREEN</div></div></div>
-    <div class="item-row" data-id="16"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Handschuhe Held Madoc</div><div class="item-response">ON</div></div></div>
-    <div class="item-row" data-id="17"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Stiefel Stylmartin Rocket</div><div class="item-response">CLOSED</div></div></div>
-    <div class="item-row" data-id="18"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Jeans Rebelhorn mit D30 Hüftprotektoren</div><div class="item-response">ON AND SET</div></div></div>
+    <div class="phase"><div class="phase-label">03 — BEFORE START · AUFSTEIGEN</div></div>
+    <div class="item-row" data-id="27"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Seitenständer — vollständig hochgeklappt</div><div class="item-response">UP</div></div></div>
+    <div class="item-row" data-id="28"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Motorstoppschalter — Stellung AN</div><div class="item-response">ON</div></div></div>
+    <div class="item-row" data-id="29"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Getriebe — Leerlauf</div><div class="item-response">NEUTRAL</div></div></div>
 
-    <div class="phase"><div class="phase-label">04 — BEFORE START · SYSTEME</div></div>
-    <div class="item-row" data-id="19"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Fahrmodus — Road oder Rain</div><div class="item-response">SELECTED</div></div></div>
-    <div class="item-row" data-id="20"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">ABS Kontrollleuchte nach Anfahren</div><div class="item-response">OFF</div></div></div>
-    <div class="item-row" data-id="21"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Wetter und Strasse — Einschätzung</div><div class="item-response">ASSESSED</div></div></div>
-    <div class="item-row" data-id="22"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Regenkombi — dabei wenn nötig</div><div class="item-response">STOWED</div></div></div>
+    <div class="phase"><div class="phase-label">04 — ENGINE START</div></div>
+    <div class="item-row" data-id="30"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Zündung — EIN</div><div class="item-response">ON</div></div></div>
+    <div class="item-row" data-id="31"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Warnleuchten — Selbsttest abgeschlossen</div><div class="item-response">CHECKED</div></div></div>
+    <div class="item-row" data-id="32"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kupplungshebel — vollständig angezogen</div><div class="item-response">PULLED</div></div></div>
+    <div class="item-row" data-id="33"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Starterknopf — Motor läuft</div><div class="item-response">RUNNING</div></div></div>
+    <div class="item-row" data-id="34"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Öldruck-Warnleuchte — erloschen</div><div class="item-response">OFF</div></div></div>
+    <div class="item-row" data-id="35"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Fahrmodus — Road oder Rain</div><div class="item-response">SELECTED</div></div></div>
 
-    <div class="phase"><div class="phase-label">05 — BEFORE DEPARTURE · MENTAL BRIEFING</div></div>
-    <div class="item-row" data-id="23"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Pilot — fit to ride</div><div class="item-response">FIT</div></div></div>
-    <div class="item-row" data-id="24"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Vollbremsung — Gas zu, kuppeln, beide Bremsen voll</div><div class="item-response">CONFIRMED</div></div></div>
-    <div class="item-row" data-id="25"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Abstand — Zwei-Sekunden-Regel</div><div class="item-response">CONFIRMED</div></div></div>
-    <div class="item-row" data-id="26"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kreuzungen — bremsbereit und Blickkontakt</div><div class="item-response">AWARE</div></div></div>
-    <div class="item-row" data-id="27"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kurven — sanft bremsen, Ausweg fixieren</div><div class="item-response">CONFIRMED</div></div></div>
+    <div class="phase"><div class="phase-label">05 — BEFORE DEPARTURE · SYSTEMS CHECK</div></div>
+    <div class="item-row" data-id="36"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Bremsen — Bremsleistung vorne und hinten prüfen</div><div class="item-response">OPERATIVE</div></div></div>
+    <div class="item-row" data-id="37"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">ABS-Leuchte — erlischt nach 10 km/h</div><div class="item-response">CONFIRMED</div></div></div>
 
-    <div style="height:20px;"></div>
+    <div class="phase"><div class="phase-label">06 — DURING RIDE · AWARENESS</div></div>
+    <div class="item-row" data-id="38"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Gefahrenstellen — Kreuzungen bremsbereit, bei Nässe Gullis und Markierungen meiden</div><div class="item-response">CONFIRMED</div></div></div>
+    <div class="item-row" data-id="39"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Blickführung — weit vorausschauen, Worst-Case annehmen, damit rechnen übersehen zu werden</div><div class="item-response">CONFIRMED</div></div></div>
+    <div class="item-row" data-id="40"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Abstand &amp; Tempo — Abstand gleich Bremsweg plus Reserve, Geschwindigkeit anpassen</div><div class="item-response">CONFIRMED</div></div></div>
+    <div class="item-row" data-id="41"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Kurven — nie am Limit, immer Reserve für Unvorhergesehenes</div><div class="item-response">CONFIRMED</div></div></div>
+    <div class="item-row" data-id="42"><div class="item-dot"></div><div class="item-content"><div class="item-challenge">Vollbremsung — Gas zu, kuppeln, beide Bremsen voll</div><div class="item-response">CONFIRMED</div></div></div>
+<div style="height:20px;"></div>
   </div>
 
   <!-- VOICE PANEL -->
@@ -185,7 +201,7 @@
         ✓ CHECKED
       </button>
     </div>
-    <div class="voice-hint" id="voice-hint">Sag "Checked" oder "OK" — oder tippe ✓ CHECKED</div>
+    <div class="voice-hint" id="voice-hint">Say "Checked" or tap ✓ CHECKED</div>
   </div>
 </div>
 
@@ -194,7 +210,7 @@
   <div class="cl-header">
     <button class="cl-back" onclick="goHome()">←</button>
     <span class="cl-title">MANUELL</span>
-    <span class="cl-counter" id="man-counter">0/28</span>
+    <span class="cl-counter" id="man-counter">0/42</span>
   </div>
   <div class="progress-bar"><div class="progress-fill" id="man-prog-fill" style="width:0%"></div></div>
   <div class="manual-scroll" id="manual-items"></div>
@@ -214,34 +230,54 @@
 
 <script>
 const ITEMS = [
-  {phase:'01 — PRE-FLIGHT · MOTORRAD', phaseComplete:'Pre-flight. Motorcycle. Complete.', challenge:'Reifen — Druck und Zustand', response:'CHECKED', speak:'Tires. Pressure and condition.'},
-  {challenge:'Motoröl — Stand', response:'CHECKED', speak:'Engine oil. Level.'},
-  {challenge:'Kühlflüssigkeit — Min Max', response:'CHECKED', speak:'Coolant. Min. Max.'},
+  {phase:'00 — PRE-RIDE · PILOT CHECK', phaseAnnounce:'Pre-ride checklist. Pilot check.', phaseComplete:'Pilot check. Complete.', challenge:'Pilot — fit to ride', response:'FIT', speak:'Pilot. Fit to ride.'},
+  {challenge:'Wetter & Strasse — Einschätzung', response:'ASSESSED', speak:'Weather. Road conditions. Assessed.'},
+  {challenge:'Calimoto — Route, km und Zeit geplant', response:'PLANNED', speak:'Route. Calimoto. Distance and time. Planned.'},
+  {challenge:'iPhone — Benachrichtigungen aus, Bildschirmsperre auf Nie', response:'SET', speak:'iPhone. Notifications off. Auto lock. Never.'},
+
+  {phase:'01 — PRE-RIDE · SICHTPRÜFUNG', phaseAnnounce:'Pre-ride checklist. Visual inspection.', phaseComplete:'Visual inspection. Complete.', challenge:'Leckagen am Boden', response:'NONE', speak:'Leaks. Ground check.'},
+  {challenge:'Motoröl — Stand am Schauglas', response:'CHECKED', speak:'Engine oil. Level.'},
+  {challenge:'Kühlmittel — Ausgleichsbehälter Min/Max', response:'CHECKED', speak:'Coolant. Expansion tank. Min. Max.'},
   {challenge:'Kette — Spannung und Schmierung', response:'CHECKED', speak:'Chain. Tension and lubrication.'},
-  {challenge:'Leckagen am Boden', response:'NONE', speak:'Leaks. Ground check.'},
-  {challenge:'Tank — Kraftstoff ausreichend', response:'SUFFICIENT', speak:'Fuel. Quantity.'},
-  {challenge:'Beleuchtung — alle Lichter', response:'OPERATIVE', speak:'Lights. All systems.'},
+  {challenge:'Reifen — Profil, Druck, Zustand', response:'CHECKED', speak:'Tires. Profile. Pressure. Condition.'},
+  {challenge:'Bremsflüssigkeit — beide Behälter Min/Max', response:'CHECKED', speak:'Brake fluid. Both reservoirs. Min. Max.'},
+  {challenge:'Gasgriff — kehrt frei in Leerlauf zurück', response:'CHECKED', speak:'Throttle. Returns freely to idle.'},
   {challenge:'Spiegel — Ausrichtung', response:'SET', speak:'Mirrors. Alignment.'},
-  {phase:'02 — PRE-FLIGHT · ERGONOMIE', phaseComplete:'Pre-flight. Ergonomics. Complete.', challenge:'Bremshebel — Winkel und Abstand', response:'SET', speak:'Brake lever. Angle and reach.'},
-  {challenge:'Fussrasten und Schalthebel — Winkel', response:'SET', speak:'Foot pegs. Gear lever. Angle.'},
-  {challenge:'Sitzposition — beide Füsse auf Boden', response:'CONFIRMED', speak:'Seating position. Both feet.'},
-  {challenge:'Gepäck und Topcase — gesichert', response:'SECURED', speak:'Luggage and top case. Secured.'},
-  {challenge:'Diebstahlschutz Abus — entfernt', response:'REMOVED', speak:'Lock. Removed.'},
-  {phase:'03 — AUSRÜSTUNG · CREW GEAR', phaseComplete:'Crew gear. Complete.', challenge:'Helm Shoei Glamster — Verschluss', response:'LOCKED', speak:'Helmet. Visor. Locked.'},
-  {challenge:'Jacke Alpinestars — Protektoren und Reissverschlüsse', response:'CLOSED', speak:'Jacket. Protectors. Zippers.'},
-  {challenge:'Tech-Air Airbag — LED Status', response:'GREEN', speak:'Airbag. Status.'},
-  {challenge:'Handschuhe Held Madoc', response:'ON', speak:'Gloves.'},
-  {challenge:'Stiefel Stylmartin Rocket', response:'CLOSED', speak:'Boots.'},
-  {challenge:'Jeans Rebelhorn mit D30 Hüftprotektoren', response:'ON AND SET', speak:'Riding jeans. Hip protectors.'},
-  {phase:'04 — BEFORE START · SYSTEME', phaseComplete:'Before start. Systems. Complete.', challenge:'Fahrmodus — Road oder Rain', response:'SELECTED', speak:'Ride mode. Road or Rain.'},
-  {challenge:'ABS Kontrollleuchte nach Anfahren', response:'OFF', speak:'A B S. Warning light.'},
-  {challenge:'Wetter und Strasse — Einschätzung', response:'ASSESSED', speak:'Weather. Road conditions.'},
-  {challenge:'Regenkombi — dabei wenn nötig', response:'STOWED', speak:'Rain gear. Stowed.'},
-  {phase:'05 — BEFORE DEPARTURE · MENTAL BRIEFING', phaseComplete:'Before departure. Checklist complete. Clear to depart.', challenge:'Pilot — fit to ride', response:'FIT', speak:'Pilot. Fit to ride.'},
-  {challenge:'Vollbremsung — Gas zu, kuppeln, beide Bremsen voll', response:'CONFIRMED', speak:'Emergency braking. Both brakes. Full.'},
-  {challenge:'Abstand — Zwei-Sekunden-Regel', response:'CONFIRMED', speak:'Following distance. Two seconds.'},
-  {challenge:'Kreuzungen — bremsbereit und Blickkontakt', response:'CONFIRMED', speak:'Intersections. Eye contact.'},
-  {challenge:'Kurven — sanft bremsen, Ausweg fixieren', response:'CONFIRMED', speak:'Corners. No lean braking. Look ahead.'},
+  {challenge:'Beleuchtung — alle Lichter', response:'OPERATIVE', speak:'Lights. All systems.'},
+  {challenge:'Tank — Kraftstoff ausreichend', response:'SUFFICIENT', speak:'Fuel. Quantity.'},
+  {challenge:'Diebstahlschloss — entfernt', response:'REMOVED', speak:'Lock. Removed.'},
+  {challenge:'Fussrasten & Schalthebel — auf Fahrer eingestellt', response:'SET', speak:'Foot pegs. Gear lever. Set for rider.'},
+  {challenge:'Sitzposition — bequem', response:'CONFIRMED', speak:'Seating position. Comfortable.'},
+
+  {phase:'02 — AUSRÜSTUNG · CREW GEAR', phaseAnnounce:'Crew gear checklist.', phaseComplete:'Crew gear. Complete.', challenge:'Alpinestar App — öffnen', response:'OPEN', speak:'Alpinestar app. Open.'},
+  {challenge:'Airbag-Weste — mit App verbinden, LED grün, rote Taste drücken', response:'ARMED', speak:'Airbag vest. Connect to app. L E D green. Press red button. Ride started.'},
+  {challenge:'Cardo Edge — einschalten', response:'ON', speak:'Cardo Edge. Power on.'},
+  {challenge:'Helm — sitzt gut, Doppel-D Verschluss geschlossen', response:'LOCKED', speak:'Helmet. Fit checked. Double D. Locked.'},
+  {challenge:'Jacke — Protektoren drin, richtige Position, überall geschlossen', response:'CHECKED', speak:'Jacket. Protectors in. Correct position. Fully closed.'},
+  {challenge:'Warnweste — über Jacke angezogen', response:'ON', speak:'Warn vest. On.'},
+  {challenge:'Handschuhe — angezogen und Verschluss geschlossen', response:'SECURED', speak:'Gloves. On and secured.'},
+  {challenge:'Schuhe — angezogen und Verschluss geschlossen', response:'SECURED', speak:'Boots. On and secured.'},
+  {challenge:'Jeans — Protektoren drin, sitzen an richtiger Körperstelle', response:'CHECKED', speak:'Riding jeans. Protectors in. Correct position.'},
+
+  {phase:'03 — BEFORE START · AUFSTEIGEN', phaseAnnounce:'Before start checklist. Mount up.', phaseComplete:'Before start. Complete.', challenge:'Seitenständer — vollständig hochgeklappt', response:'UP', speak:'Side stand. Retracted.'},
+  {challenge:'Motorstoppschalter — Stellung AN', response:'ON', speak:'Engine stop switch. Run.'},
+  {challenge:'Getriebe — Leerlauf', response:'NEUTRAL', speak:'Gearbox. Neutral.'},
+
+  {phase:'04 — ENGINE START', phaseAnnounce:'Engine start checklist.', phaseComplete:'Engine start. Complete.', challenge:'Zündung — EIN', response:'ON', speak:'Ignition. On.'},
+  {challenge:'Warnleuchten — Selbsttest abgeschlossen', response:'CHECKED', speak:'Warning lights. Self-test complete.'},
+  {challenge:'Kupplungshebel — vollständig angezogen', response:'PULLED', speak:'Clutch lever. Fully in.'},
+  {challenge:'Starterknopf — Motor läuft', response:'RUNNING', speak:'Starter. Engine running.'},
+  {challenge:'Öldruck-Warnleuchte — erloschen', response:'OFF', speak:'Oil pressure. Warning light. Off.'},
+  {challenge:'Fahrmodus — Road oder Rain', response:'SELECTED', speak:'Ride mode. Road or Rain.'},
+
+  {phase:'05 — BEFORE DEPARTURE · SYSTEMS CHECK', phaseAnnounce:'Before departure checklist. Systems check.', phaseComplete:'Before departure. Complete.', challenge:'Bremsen — Bremsleistung vorne und hinten prüfen', response:'OPERATIVE', speak:'Brakes. Front and rear. Performance check.'},
+  {challenge:'ABS-Leuchte — erlischt nach 10 km/h', response:'CONFIRMED', speak:'A B S. Warning light. Clears above ten kilometres per hour.'},
+
+  {phase:'06 — DURING RIDE · AWARENESS', phaseAnnounce:'Ride awareness briefing.', phaseComplete:'', challenge:'Gefahrenstellen — Kreuzungen bremsbereit, bei Nässe Gullis und Markierungen meiden', response:'CONFIRMED', speak:'Hazards. Intersections brake ready. Wet surfaces. Drain covers. Road markings. Avoid.'},
+  {challenge:'Blickführung — weit vorausschauen, Worst-Case annehmen, damit rechnen übersehen zu werden', response:'CONFIRMED', speak:'Vision. Look far ahead. Assume worst case. Expect to be invisible.'},
+  {challenge:'Abstand & Tempo — Abstand gleich Bremsweg plus Reserve, Geschwindigkeit den Verhältnissen anpassen', response:'CONFIRMED', speak:'Distance and speed. Gap equals stopping distance plus reserve. Match speed to conditions.'},
+  {challenge:'Kurven — nie am Limit, immer Reserve für Unvorhergesehenes', response:'CONFIRMED', speak:'Corners. Never at the limit. Always keep reserve.'},
+  {challenge:'Vollbremsung — Gas zu, kuppeln, beide Bremsen voll', response:'CONFIRMED', speak:'Emergency braking. Throttle closed. Clutch in. Both brakes. Full.'},
 ];
 
 const TOTAL = ITEMS.length;
@@ -299,10 +335,11 @@ function startAudio() {
   updateProgress();
   showScreen('checklist');
   setTimeout(() => {
-    speak('Street Twin nine hundred. Pre-ride checklist. Starting.', () => {
-      setTimeout(() => { highlightCurrent(); speakCurrent(); }, 500);
-    }, 1.0, 0.78);
-  }, 400);
+    const firstPhase = ITEMS[0].phaseAnnounce || 'Pre-ride checklist.';
+    speak(firstPhase, () => {
+      setTimeout(() => { highlightCurrent(); speakCurrent(); }, 400);
+    }, 1.0, 1.25);
+  }, 300);
 }
 
 function highlightCurrent() {
@@ -318,7 +355,7 @@ function speakCurrent() {
   const item = ITEMS[currentIdx];
   speak(item.speak, () => {
     setTimeout(() => startMicAuto(), 400);
-  }, 1.0, 1.0);
+  }, 1.0, 1.25);
 }
 
 let cockpitVoice = null;
@@ -336,7 +373,7 @@ function loadCockpitVoice() {
 if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadCockpitVoice;
 setTimeout(loadCockpitVoice, 500);
 
-function speak(text, callback, volume=1.0, rate=0.82) {
+function speak(text, callback, volume=1.0, rate=1.25) {
   if (!synth) { if(callback) callback(); return; }
   synth.cancel();
   const u = new SpeechSynthesisUtterance(text);
@@ -354,10 +391,21 @@ function stopSpeech() {
   if (synth) synth.cancel();
 }
 
-function getPhaseComplete(idx) {
-  for (let i = idx + 1; i <= TOTAL; i++) {
-    if (i === TOTAL) return null;
-    if (ITEMS[i].phase) return ITEMS[idx].phaseComplete || null;
+function getPhaseNameForItem(idx) {
+  for (let i = idx; i >= 0; i--) {
+    if (ITEMS[i].phase) return ITEMS[i].phaseAnnounce || null;
+  }
+  return null;
+}
+
+function isLastInPhase(idx) {
+  const next = idx + 1;
+  return next >= TOTAL || !!ITEMS[next].phase;
+}
+
+function getPhaseCompleteForItem(idx) {
+  for (let i = idx; i >= 0; i--) {
+    if (ITEMS[i].phase) return ITEMS[i].phaseComplete || null;
   }
   return null;
 }
@@ -370,23 +418,32 @@ function confirmCurrent() {
   const row = document.querySelector('#checklist .item-row[data-id="'+currentIdx+'"]');
   if (row) { row.classList.remove('active-item'); row.classList.add('confirmed'); }
 
-  const nextIdx = currentIdx + 1;
-  const phaseComplete = (nextIdx >= TOTAL || ITEMS[nextIdx].phase) ? (ITEMS[currentIdx].phaseComplete || null) : null;
+  const wasLastInPhase = isLastInPhase(currentIdx);
+  const phaseCompleteText = wasLastInPhase ? getPhaseCompleteForItem(currentIdx) : null;
 
-  currentIdx = nextIdx;
+  currentIdx++;
   updateProgress();
 
   if (currentIdx >= TOTAL) {
-    const finalPhrase = ITEMS[TOTAL-1].phaseComplete || 'Before departure checklist complete. Clear to depart.';
-    setTimeout(() => speak(finalPhrase, () => setTimeout(showDone, 800)), 300);
+    const finalPhrase = 'Before departure checklist complete. Clear to depart. Good ride.';
+    setTimeout(() => speak(finalPhrase, () => setTimeout(showDone, 1000), 1.0, 1.25), 300);
     return;
   }
 
-  if (phaseComplete) {
+  if (wasLastInPhase && phaseCompleteText) {
+    const nextPhaseAnnounce = ITEMS[currentIdx].phaseAnnounce || null;
     setTimeout(() => {
-      speak(phaseComplete, () => {
-        setTimeout(() => { highlightCurrent(); speakCurrent(); }, 600);
-      }, 1.0, 0.78);
+      speak(phaseCompleteText, () => {
+        setTimeout(() => {
+          if (nextPhaseAnnounce) {
+            speak(nextPhaseAnnounce, () => {
+              setTimeout(() => { highlightCurrent(); speakCurrent(); }, 500);
+            }, 1.0, 1.25);
+          } else {
+            setTimeout(() => { highlightCurrent(); speakCurrent(); }, 500);
+          }
+        }, 700);
+      }, 1.0, 1.25);
     }, 300);
   } else {
     setTimeout(() => { highlightCurrent(); speakCurrent(); }, 350);
